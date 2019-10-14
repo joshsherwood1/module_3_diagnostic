@@ -8,9 +8,11 @@ class HogwartsHousesSearchResults
         faraday.adapter Faraday.default_adapter
       end
 
-      response = conn.get('/v1/characters', key: ENV['POTTER_API_KEY'], house: "Gryffindor")
+      response = conn.get('/v1/characters', key: ENV['POTTER_API_KEY'], house: @house)
 
-      JSON.parse(response.body, symbolize_names: true)
+      results = JSON.parse(response.body, symbolize_names: true)
+      data = results.map do |member_data|
+        Member.new(member_data)
+      end
     end
-
 end

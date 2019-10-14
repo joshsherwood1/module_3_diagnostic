@@ -18,7 +18,7 @@ describe 'A registered user' do
 
     expect(current_path).to eq("/search")
 
-    expect(page).to have_content("18 Members")
+    expect(page).to have_content("41 Members")
   end
 end
 
