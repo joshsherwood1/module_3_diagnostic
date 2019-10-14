@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe 'A registered user' do
-  it 'I can see list of five github repos with name of each repo linked to repo on github if I have a github_token' do
+describe 'A visitor' do
+  it 'can see all members of a hogwarts house and each members information' do
     #json_response = File.open('./fixtures/potter_data.json')
     #stub_request(:get, 'https://www.potterapi.com/v1/characters').to_return(status: 200, body: json_response)
 
