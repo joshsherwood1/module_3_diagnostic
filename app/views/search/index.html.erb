@@ -1,0 +1,8 @@
+<h2><%= @members.count %> Members</h2>
+<% @members.each do |member|  %>
+  <%= member.name %>
+  <%= member.role %>
+  <%= member.house %>
+  <%= member.patronus %>
+  <br>
+<% end %>
